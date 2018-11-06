@@ -24,6 +24,8 @@ namespace ExceptionTest {
             }
             catch (Exception e) {
                 Console.WriteLine("Bum! Erro: " + e.Message);
+            } finally {
+                Console.WriteLine("Obrigado por usar o programa!");
             }
         }
     }
