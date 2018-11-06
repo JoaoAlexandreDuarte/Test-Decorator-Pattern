@@ -8,8 +8,14 @@ namespace ExceptionTest {
     class Program {
         static void Main(string[] args) {
             Console.Write("Insere um membro inteiro: ");
-            int i = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Número inserido: {i}");
+
+            try {
+                int i = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"Número inserido: {i}");
+            }
+            catch (Exception e) {
+                Console.WriteLine("Too bad! Error: " + e.Message);
+            }
         }
     }
 }
